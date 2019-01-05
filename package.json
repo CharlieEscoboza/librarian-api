@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start-local": "./scripts/start-local.sh",
-    "start": "node ./index.js",
+    "start": "./scripts/start.sh",
     "dev": "nodemon --legacy-watch index.js",
+    "prod": "node index.js",
     "test": ""
   },
   "keywords": [],
