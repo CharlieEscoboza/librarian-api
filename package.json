@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node ./index.js",
-    "dev": "nodemon ./index.js",
+    "start-local": "./scripts/start-local.sh",
+    "start": "node ./index.js",
+    "dev": "nodemon --legacy-watch index.js",
     "test": ""
   },
   "keywords": [],
