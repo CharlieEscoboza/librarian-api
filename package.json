@@ -1,43 +1,43 @@
 {
-    "name": "librarian-api",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "start-local": "./scripts/start-local.sh",
-        "start": "./scripts/start.sh",
-        "dev": "nodemon --legacy-watch index.js",
-        "prod": "node index.js",
-        "test": ""
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "express": "^4.16.4",
-        "mongoose": "^5.3.14"
-    },
-    "devDependencies": {
-        "eslint": "^5.9.0",
-        "eslint-config-google": "^0.11.0",
-        "husky": "^2.2.0",
-        "lint-staged": "^8.1.6",
-        "nodemon": "^1.18.7",
-        "prettier": "^1.17.1"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
-    },
-    "lint-staged": {
-        "*.{js,css,json,md}": [
-            "prettier --write",
-            "git add"
-        ],
-        "*.js": [
-            "eslint --fix",
-            "git add"
-        ]
+  "name": "librarian-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-local": "./scripts/start-local.sh",
+    "start": "./scripts/start.sh",
+    "dev": "nodemon --legacy-watch index.js",
+    "prod": "node index.js",
+    "test": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.3.14"
+  },
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-google": "^0.11.0",
+    "husky": "^2.2.0",
+    "lint-staged": "^8.1.6",
+    "nodemon": "^1.18.7",
+    "prettier": "^1.17.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.{js,css,json,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
 }
