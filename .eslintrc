@@ -2,9 +2,13 @@
   "extends": "google",
   "env": { "es6": true },
   "rules": {
-    "prefer-const": ["error", {
+    "prefer-const": [
+      "error",
+      {
         "destructuring": "all",
         "ignoreReadBeforeAssign": true
-    }]
+      }
+    ],
+    "one-var": ["error", "always"]
   }
 }
