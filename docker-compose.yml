@@ -1,0 +1,35 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./docker/development.Dockerfile
+    ports:
+      - "9000:9000"
+    volumes:
+      - "./://usr/src/app/"
+    links:
+      - postgres
+    depends_on:
+      - postgres
+  postgres:
+    build:
+      context: .
+      dockerfile: ./scripts/postgres/Dockerfile
+    restart: always
+    volumes:
+      -  postgres-volume:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: example
+      POSTGRES_DB: postgres
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "8080:8080"
+volumes:
+  postgres-volume:
+    external: true
