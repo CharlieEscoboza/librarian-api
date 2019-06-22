@@ -13,6 +13,7 @@ CREATE TABLE authors (
   address TEXT,
   city TEXT,
   country TEXT,
+  active BOOLEAN DEFAULT TRUE,
   PRIMARY KEY (id)
 );
 
@@ -24,6 +25,7 @@ CREATE TABLE editorials (
   address TEXT,
   city TEXT,
   country TEXT,
+  active BOOLEAN DEFAULT TRUE,
   PRIMARY KEY (id)
 );
 
@@ -31,13 +33,15 @@ CREATE TABLE editorials (
 CREATE TABLE languages (
   id SERIAL,
   name TEXT NOT NULL,
+  active BOOLEAN DEFAULT TRUE,
   PRIMARY KEY (id)
 );
 
 -- Create cateogries table
-CREATE TABLE cateogries (
+CREATE TABLE categories (
   id SERIAL,
   name TEXT NOT NULL,
+  active BOOLEAN DEFAULT TRUE,
   PRIMARY KEY (id)
 );
 
@@ -50,5 +54,6 @@ CREATE TABLE books (
   category_ids INT[],
   editorial_id INT REFERENCES editorials(id),
   author_ids INT[],
+  active BOOLEAN DEFAULT TRUE,
   PRIMARY KEY (id)
 );
