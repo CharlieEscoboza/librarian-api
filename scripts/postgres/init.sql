@@ -57,3 +57,13 @@ CREATE TABLE books (
   active BOOLEAN DEFAULT TRUE,
   PRIMARY KEY (id)
 );
+
+-- Create merchants table
+CREATE TABLE merchants (
+  id SERIAL,
+  name TEXT NOT NULL,
+  buy_url TEXT NOT NULL,
+  active BOOLEAN DEFAULT TRUE,
+  book_id INT REFERENCES books(id)
+  PRIMARY KEY (id)
+)
