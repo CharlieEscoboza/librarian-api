@@ -9,5 +9,6 @@ module.exports.ENTITIES = {
   EDITORIALS: 'editorials',
   LANGUAGES: 'languages',
   CATEGORIES: 'categories',
-  BOOKS: 'books'
+  BOOKS: 'books',
+  MERCHANTS: 'merchants'
 };
